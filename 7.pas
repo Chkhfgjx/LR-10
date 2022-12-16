@@ -1,0 +1,28 @@
+﻿begin
+  var mas:array[1..8,1..6] of integer;
+  var a, y:array[1..8] of integer;
+  for var i:=1 to 8 do begin
+    for var j:=1 to 6 do begin
+      mas[i,j]:=random(-100,100);
+      print(mas[i,j]);
+      end;
+    println();
+    end;
+    
+  for var i:=1 to 8 do 
+    for var j:=1 to 6 do begin
+      if mas[i,j]<0 then
+        y[i] += 1;
+    end;
+    
+  for var i:=1 to 8 do
+    if y[i]=0 then
+      a[i]:=1
+    else
+      a[i]:=-1;
+    
+  println();  
+  
+  for var i:=1 to 8 do
+    print(a[i]);
+end.
